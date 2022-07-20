@@ -1,0 +1,22 @@
+1.按顺序打印出APP、ViewController生命周期的各个事件
+      APP：not running(非运行态)---->inactive(非激活态)---->Active(激活态)--(中间会短暂地切入inactive状态)-->Background(后台状态)---->Suspended(挂起状态)
+	not running(非运行态)：此时APP已经被“销毁”
+	inactive(非激活态)：做一些应用的准备工作
+	Active(激活态)：响应用户的操作
+	Background(后台状态)：还可以运行一些代码，类似数据保存等的操作
+	Suspended(挂起状态)：后台状态之后的一个状态
+ ViewController：alloc/init---->loadView---->viewDidLoad---->viewWillAppear---->viewDidAppear---->viewWillDisappear---->viewDidDisappear---->dealloc
+	alloc/init:分配内存、创造实例
+	loadView:将视图展示出来
+	viewDidLoad:做当前页面代码的编写或发送一些网络请求等（具体根据需求）
+	viewWillAppear:页面即将出现
+	viewDidAppear:页面已经出现
+	viewWillDisappear:页面即将消失
+	viewDidDisappear:页面已经消失
+	dealloc:页面即将被销毁，做一些内存释放的操作
+
+2.写出五种常用的UI控件
+	UIScrollView、UITableView、UICollectionView、UIWebView、WKWebView
+
+3.列举三个UITableViewDelegate声明的方法
+	定义每个UITableView中的cell的行高、设置UITableView每个分组的Header的Title、设置UITableView分组Header的高
